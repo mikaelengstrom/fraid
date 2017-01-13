@@ -1,0 +1,5 @@
+[run]
+include = fraid/*
+omit = *migrations*, *tests*
+plugins =
+    django_coverage_plugin

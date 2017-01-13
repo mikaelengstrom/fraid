@@ -1,0 +1,1 @@
+FROM ryanratcliff/dynamodb:latest

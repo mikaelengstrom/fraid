@@ -1,0 +1,9 @@
+EMPTY_SEQUENCE = 0
+ROCK = 1
+PAPER = 2
+SCISSORS = 3
+
+LOSE = 0
+WIN = 1
+TIE = 2
+

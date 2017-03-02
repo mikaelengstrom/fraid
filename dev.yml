@@ -29,13 +29,6 @@ services:
       - "8000:8000"
     links:
       - postgres
-      - dynamodb
-
-  dynamodb:
-    build: ./compose/dynamodb
-    ports:
-      - "8010:8000"
-
 
   pycharm:
     build:

@@ -9,6 +9,12 @@ from django.views.generic import TemplateView
 from django.views import defaults as default_views
 from django.contrib import admin
 
+from rest_framework import routers
+from fraid.rps import viewsets
+
+router = routers.DefaultRouter()
+router.register(r'games', viewsets.GameViewSet)
+
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='pages/home.html'), name='home'),
     url(r'^about/$', TemplateView.as_view(template_name='pages/about.html'), name='about'),
@@ -21,8 +27,9 @@ urlpatterns = [
     url(r'^accounts/', include('allauth.urls')),
 
     # Your stuff: custom urls includes go here
-    url(r'^admin/', admin.site.urls)
+    url(r'^admin/', admin.site.urls),
 
+    url(r'^api/v1/', include(router.urls, namespace='api')),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

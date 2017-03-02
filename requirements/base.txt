@@ -42,6 +42,7 @@ redis>=2.10.5
 
 boto3==1.4.3
 
+djangorestframework==3.5.4
 
 
 # Your custom requirements go here
